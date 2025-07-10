@@ -25,14 +25,20 @@ git clone https://github.com/Khushi0389/pomodoro-timer.git
 cd pomodoro-timer
 ```
 
-# Portable build
+### Portable build
 
-A ready-made ZIP is provided. Simply unzip and run:
-```
-unzip PomodoroTimer-portable.zip
+A ready-made ZIP is provided. Download it here:
+
+[PomodoroTimer Portable ZIP (119 MB)] https://drive.google.com/file/d/1wMwvu0yDLfK7HL561N9krBXXHFveP34h/view?usp=drive_link
+
+Unzip and run:
+
+```bash
+unzip PomodoroTimer-win32-x64.zip
 cd PomodoroTimer-win32-x64
 ./PomodoroTimer.exe   # or double-click in File Explorer
 ```
+
 # Development
 ```
 npm install
