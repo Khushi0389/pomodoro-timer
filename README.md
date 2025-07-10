@@ -21,7 +21,7 @@ A cross-platform Electron Pomodoro Timer with tray integration and auto-launch.
 ### Clone the repository
 
 ```bash
-git clone https://github.com/<YourUsername>/pomodoro-timer.git
+git clone https://github.com/Khushi0389/pomodoro-timer.git
 cd pomodoro-timer
 ```
 
