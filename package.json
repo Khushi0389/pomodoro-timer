@@ -1,0 +1,42 @@
+{
+  "name": "electron-timer",
+  "version": "1.0.0",
+  "description": "Pomodoro Timer with Tray & Auto-Launch",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . PomodoroTimer --overwrite --platform=win32 --arch=x64 --icon=tray-icon.ico --out=release-build --prune=true --asar",
+    "dist": "electron-builder --win nsis"
+  },
+  "keywords": [
+    "electron",
+    "pomodoro",
+    "timer",
+    "tray"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^37.2.1",
+    "electron-packager": "^17.1.2",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.yourname.pomodoro",
+    "productName": "PomodoroTimer",
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "style.css",
+      "script.js",
+      "ding.mp3",
+      "tray-icon.ico"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "tray-icon.ico",
+      "forceCodeSigning": false
+    }
+  }
+}

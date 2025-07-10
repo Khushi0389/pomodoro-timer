@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pomodoro Timer with Long Breaks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-pastel">
+  <div class="window">
+    <header class="title-bar">
+      <span class="title">Pomodoro Timer</span>
+      <div class="window-controls">
+        <span class="btn close"></span>
+      </div>
+    </header>
+
+    <!-- Settings: Theme + Pomodoro + Long-break length -->
+    <div class="settings">
+      <label for="themeSelect">Theme:</label>
+      <select id="themeSelect">
+        <option value="light">Light</option>
+        <option value="pastel" selected>Pastel</option>
+        <option value="dark">Dark</option>
+      </select>
+
+      <label class="pomodoro-toggle">
+        <input type="checkbox" id="pomodoroMode" />
+        Pomodoro
+      </label>
+
+      <label for="longBreakInput">Long Break (mins):</label>
+      <input
+        id="longBreakInput"
+        type="number"
+        min="5"
+        max="60"
+        value="15"
+        style="width: 40px;"
+      />
+    </div>
+
+    <!-- Duration picker for initial session -->
+    <div class="duration-picker">
+      <label for="durationSelect">Session Length:</label>
+      <select id="durationSelect">
+        <option value="1500">25 min (Work)</option>
+        <option value="300">5 min (Short Break)</option>
+        <option value="0">Custom…</option>
+      </select>
+      <input
+        id="customDuration"
+        type="number"
+        min="1"
+        max="60"
+        placeholder="mins"
+        style="display: none; width: 50px;"
+      />
+    </div>
+
+    <main class="content">
+      <div class="status-line">
+        <span id="modeLabel">Idle</span>
+        <span id="cycleLabel">Cycles: 0</span>
+      </div>
+
+      <div class="timer-display">25:00</div>
+
+      <div class="buttons">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn" disabled>Pause</button>
+        <button id="resetBtn" disabled>Reset</button>
+      </div>
+
+      <div id="donePopup" class="popup" style="display: none;">
+        <p id="popupText">✨ Time’s up! ✨</p>
+        <button id="closePopup">OK</button>
+      </div>
+    </main>
+  </div>
+
+  <audio id="dingSound" src="ding.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
